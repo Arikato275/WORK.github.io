@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    /* เปลี่ยนเป็น gradient ที่คล้ายท้องฟ้ายามค่ำคืน */
+    background: linear-gradient(to bottom, #000033, #000000); /* สีน้ำเงินเข้มไล่ลงดำ */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: #fff; /* สีข้อความเริ่มต้นเป็นสีขาว */
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.confetti {
+    position: absolute;
+    /* เปลี่ยนสีเกล็ดให้ตัดกับพื้นหลัง */
+    background-color: #fce18a; /* สีเหลืองทอง */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: confetti-fall 3s linear infinite,
+               confetti-rotate 1s linear infinite;
+}
+
+.confetti:nth-child(even) {
+    background-color: #ff726f; /* สีส้มแดง */
+}
+
+.confetti:nth-child(odd) {
+    background-color: #5ab9ea; /* สีฟ้า */
+}
+
+@keyframes confetti-fall {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+
+@keyframes confetti-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message-container {
+    text-align: center;
+    z-index: 10;
+}
+
+.message {
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid orange; /* เส้นกระพริบ */
+    animation: typing 3s steps(15, end) forwards,
+               blink-caret .75s step-end infinite;
+    color: #ffffff; /* สีข้อความเป็นสีขาว */
+    text-shadow: 2px 2px 4px #000000; /* เพิ่มเงาให้ข้อความ */
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
