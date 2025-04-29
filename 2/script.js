@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const jumpscareImage = document.getElementById('jumpscare-image');
     const jumpscareAudio = document.getElementById('jumpscare-audio');
 
-    const correctAnswer = "3"; // คำตอบที่ถูกต้องคือ 3
+    const correctAnswer = "3";
 
     submitButton.addEventListener('click', function() {
         const userAnswer = answerInput.value.trim();
@@ -30,16 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
             nextPageButton.classList.remove('enabled');
             nextPageButton.classList.add('disabled');
             submitButton.classList.add('incorrect');
-
-            // แสดง Jumpscare และเล่นเสียง (ถ้ามีการตั้งค่า)
+            
             jumpscareContainer.style.display = 'flex';
             if (jumpscareAudio) {
                 jumpscareAudio.play();
             }
-
-            // เปลี่ยนเส้นทางกลับไปหน้าแรกหลังจาก 2 วินาที และแทนที่ History
             setTimeout(function() {
-                window.location.replace('../index.html'); // ใช้ replace แทน href
+                window.location.replace('../index.html');
             }, 1000);
         }
 
@@ -48,9 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextPageButton.addEventListener('click', function() {
         if (this.classList.contains('enabled')) {
-            window.location.href = 'nextpage.html'; // อาจจะต้องปรับพาธด้วย
+            window.location.href = 'nextpage.html';
         } else {
             alert("กรุณาตอบคำถามให้ถูกต้องก่อนไปยังหน้าถัดไป");
         }
     });
 });
+
+//กว่าจะได้มาครบเหงือหยดออกหมดแล้ว//
