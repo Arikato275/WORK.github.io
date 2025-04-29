@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบตอบคำถาม</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Question 2</h1>
+        <p id="question">กำหนดให้ f(x) เป็นฟังก์ชันพหุนามดีกรี 3 ซึ่งมีสัมประสิทธิ์เป็นจำนวนจริง และมีสมบัติว่า f(1)=1, f(2)=4, และ f(3)=9 นอกจากนี้ <br>
+            กำหนดให้เส้นสัมผัสกราฟของ y=f(x) ที่จุด x=k ขนานกับเส้นตรง y=5x−2 จงหาค่าของ f 
+            ′
+             (k).</p>
+        <input type="text" id="answer" placeholder="คำตอบของคุณ"><br>
+        <button id="submitAnswer">ตรวจสอบคำตอบ</button>
+        <p id="result"></p>
+        <button id="nextPageButton" class="disabled">ไปยังหน้าถัดไป</button>
+    </div>
+
+    <div id="jumpscare-container">
+        <img id="jumpscare-image" src="https://i.pinimg.com/736x/bf/d9/00/bfd900a49db45fda78106e3eb9cc8b8e.jpg" alt="Jumpscare!">
+        <span id="jumpscare-text">กลับไปซ่ะ โหลยโท่ย</span>
+        <audio id="jumpscare-audio" src="AA.mp3"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
