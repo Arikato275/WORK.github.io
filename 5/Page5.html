@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบทดสอบตอบคำถาม</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Question 4</h1>
+        <p id="question">กำหนดให้ F(x,y)=⟨y 
+            2
+             ,2xy+x 
+            2
+             ⟩ เป็นสนามเวกเตอร์ในระนาบ xy จงหาค่าของปริพันธ์ตามเส้น ∫ 
+            C
+            ​
+             F⋅dr <br>เมื่อ C เป็นเส้นโค้งที่กำหนดโดยพาราเมตริกสมการ r(t)=⟨cost,sint⟩ สำหรับ 0≤t≤π </p>
+        <input type="text" id="answer" placeholder="คำตอบของคุณ"><br>
+        <button id="submitAnswer">ตรวจสอบคำตอบ</button>
+        <p id="result"></p>
+        <button id="nextPageButton" class="disabled">ไปยังหน้าถัดไป</button>
+    </div>
 
+    <div id="jumpscare-container">
+        <img id="jumpscare-image" src="https://i.pinimg.com/736x/bf/d9/00/bfd900a49db45fda78106e3eb9cc8b8e.jpg" alt="Jumpscare!">
+        <span id="jumpscare-text">กลับไปซ่ะ โหลยโท่ย</span>
+        <audio id="jumpscare-audio" src="AA.mp3"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
