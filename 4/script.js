@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const jumpscareImage = document.getElementById('jumpscare-image');
     const jumpscareAudio = document.getElementById('jumpscare-audio');
 
-    const correctAnswer = "2x+1"; // คำตอบที่ถูกต้องคือ 2x+1
+    const correctAnswer = "2x+1";
 
     submitButton.addEventListener('click', function() {
         const userAnswer = answerInput.value.trim();
@@ -31,15 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
             nextPageButton.classList.add('disabled');
             submitButton.classList.add('incorrect');
 
-            // แสดง Jumpscare และเล่นเสียง (ถ้ามีการตั้งค่า)
             jumpscareContainer.style.display = 'flex';
             if (jumpscareAudio) {
                 jumpscareAudio.play();
             }
-
-            // เปลี่ยนเส้นทางกลับไปหน้าแรกหลังจาก 2 วินาที และแทนที่ History
             setTimeout(function() {
-                window.location.replace('../index.html'); // ใช้ replace แทน href
+                window.location.replace('../index.html');
             }, 1000);
         }
 
@@ -48,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextPageButton.addEventListener('click', function() {
         if (this.classList.contains('enabled')) {
-            window.location.href = '../5/Page5.html'; // อาจจะต้องปรับพาธด้วย
+            window.location.href = '../5/Page5.html';
         } else {
             alert("ทำต่อไปพวกโหลยโท่ย");
         }
